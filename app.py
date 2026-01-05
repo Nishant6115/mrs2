@@ -38,7 +38,7 @@ def recommend(movie):
 # ---------------- STREAMLIT UI ----------------
 st.header("🎬 Movie Recommender System")
 
-movies = pickle.load(open('movie.pkl', 'rb'))
+movies = pickle.load(open('movies.pkl', 'rb'))
 similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 movie_list = movies['title'].values
@@ -58,5 +58,6 @@ if st.button("Show Recommendation"):
                 st.image(posters[i])
             else:
                 st.text("Poster not available")
+
 
 
